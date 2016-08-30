@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Juke</title>
+    <link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/bootstrap-dark.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <script src="/angular/angular.js" defer></script>
+    <script src="/angular-ui-router/release/angular-ui-router.js" defer></script>
+    <script src="/angular-messages/angular-messages.js" defer></script>
+    <script src="/js/module.js" defer></script>
+    <script src="/js/album/album.controllers.js" defer></script>
+    <script src="/js/album/album.factory.js" defer></script>
+    <script src="/js/album/album.states.js" defer></script>
+    <script src="/js/album/albumList.directive.js" defer></script>
+    <script src="/js/player/player.controller.js" defer></script>
+    <script src="/js/player/player.factory.js" defer></script>
+    <script src="/js/player/footer.directive.js" defer></script>
+    <script src="/js/sidebar/sidebar.controller.js" defer></script>
+    <script src="/js/sidebar/sidebar.directive.js" defer></script>
+    <script src="/js/artist/artist.controllers.js" defer></script>
+    <script src="/js/artist/artist.factory.js" defer></script>
+    <script src="/js/artist/artist.states.js" defer></script>
+    <script src="/js/song/song.factory.js" defer></script>
+    <script src="/js/song/song.controllers.js" defer></script>
+    <script src="/js/song/songList.directive.js" defer></script>
+    <script src="/js/song/doubleClick.directive.js" defer></script>
+    <script src="/js/playlist/playlist.states.js" defer></script>
+    <script src="/js/playlist/playlist.factory.js" defer></script>
+    <script src="/js/playlist/playlist.controllers.js" defer></script>
+  </head>
+  <body ng-app="juke" ng-keyup="keyboardControls()" tabindex=1>
+    <div id="main" class="container-fluid">
+
+      <div class="col-xs-2">
+        <sidebar-directive ng-controller="SidebarCtrl"></sidebar-directive>
+      </div>
+
+      <div class="col-xs-10">
+        <ui-view></ui-view>
+      </div>
+
+      <footer>
+      </footer>
+
+    </div>
+  </body>
+</html>
